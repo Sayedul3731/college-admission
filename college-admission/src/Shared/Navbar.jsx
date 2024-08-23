@@ -13,8 +13,15 @@ const Navbar = () => {
         <NavLink to="/my-college" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? `${activeDesign}` : `${pendingDesign}`}>My College</NavLink>
     </>
     return (
-        <div className="py-5 shadow-md text-center">
-            {navLinks}
+        <div className=" py-5 shadow-md text-center">
+            <div className="max-w-7xl mx-auto flex justify-between items-center">
+                <div>
+                    {navLinks}
+                </div>
+                <div>
+                    <button><NavLink to="/login">Login</NavLink></button>
+                </div>
+            </div>
         </div>
     );
 };
